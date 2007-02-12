@@ -6,7 +6,7 @@
 %define	pdir	Test
 %define	pnam	MockObject
 Summary:	Test::MockObject - Perl extension for emulating troublesome interfaces
-Summary(pl):	Test::MockObject - rozszerzenie Perla do emulacji k³opotliwych interfejsów
+Summary(pl.UTF-8):   Test::MockObject - rozszerzenie Perla do emulacji kÅ‚opotliwych interfejsÃ³w
 Name:		perl-Test-MockObject
 Version:	1.07
 Release:	1
@@ -40,18 +40,18 @@ Test::MockObject allows you to create objects that conform to
 particular interfaces with very little code. You don't have to
 reimplement the behavior, just the input and the output.
 
-%description -l pl
-Jest to prosty program nie u¿ywaj±cy ¿adnych innych modu³ów, a te s±
-³atwe do sprawdzenia. Co wiêcej, kompletne przetestowanie programu
-oznacza fa³szowanie wej¶cia do innego modu³u, próbuj±c wy³udziæ
-prawdziwe wyj¶cie z czego¶, czego nie powinno siê testowaæ.
+%description -l pl.UTF-8
+Jest to prosty program nie uÅ¼ywajÄ…cy Å¼adnych innych moduÅ‚Ã³w, a te sÄ…
+Å‚atwe do sprawdzenia. Co wiÄ™cej, kompletne przetestowanie programu
+oznacza faÅ‚szowanie wejÅ›cia do innego moduÅ‚u, prÃ³bujÄ…c wyÅ‚udziÄ‡
+prawdziwe wyjÅ›cie z czegoÅ›, czego nie powinno siÄ™ testowaÄ‡.
 
-Testowanie jest du¿o ³atwiejsze, je¶li mo¿na sterowaæ ca³ym
-¶rodowiskiem. Przy u¿yciu Test::MockObject mo¿na siê do tego zbli¿yæ.
+Testowanie jest duÅ¼o Å‚atwiejsze, jeÅ›li moÅ¼na sterowaÄ‡ caÅ‚ym
+Å›rodowiskiem. Przy uÅ¼yciu Test::MockObject moÅ¼na siÄ™ do tego zbliÅ¼yÄ‡.
 
-Test::MockObject pozwala tworzyæ obiekty zgodne z pewnymi interfejsami
-przy u¿yciu bardzo ma³ej ilo¶ci kodu. Nie trzeba reimplementowaæ
-zachowania, wystarczy wej¶cie i wyj¶cie.
+Test::MockObject pozwala tworzyÄ‡ obiekty zgodne z pewnymi interfejsami
+przy uÅ¼yciu bardzo maÅ‚ej iloÅ›ci kodu. Nie trzeba reimplementowaÄ‡
+zachowania, wystarczy wejÅ›cie i wyjÅ›cie.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
