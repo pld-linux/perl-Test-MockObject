@@ -6,7 +6,7 @@
 %define	pdir	Test
 %define	pnam	MockObject
 Summary:	Test::MockObject - Perl extension for emulating troublesome interfaces
-Summary(pl.UTF-8):   Test::MockObject - rozszerzenie Perla do emulacji kłopotliwych interfejsów
+Summary(pl.UTF-8):	Test::MockObject - rozszerzenie Perla do emulacji kłopotliwych interfejsów
 Name:		perl-Test-MockObject
 Version:	1.07
 Release:	1
