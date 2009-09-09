@@ -8,13 +8,12 @@
 Summary:	Test::MockObject - Perl extension for emulating troublesome interfaces
 Summary(pl.UTF-8):	Test::MockObject - rozszerzenie Perla do emulacji kłopotliwych interfejsów
 Name:		perl-Test-MockObject
-Version:	1.08
+Version:	1.09
 Release:	1
-# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	2a80521f544998d9e493d2898da38c26
+# Source0-md5:	3c9c2842d40fa8c389563c227804d7d8
 URL:		http://search.cpan.org/dist/Test-MockObject/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
