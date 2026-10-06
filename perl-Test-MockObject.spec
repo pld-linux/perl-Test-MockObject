@@ -7,19 +7,19 @@
 Summary:	Test::MockObject - Perl extension for emulating troublesome interfaces
 Summary(pl.UTF-8):	Test::MockObject - rozszerzenie Perla do emulacji kłopotliwych interfejsów
 Name:		perl-Test-MockObject
-Version:	1.09
-Release:	2
+Version:	1.20200122
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3c9c2842d40fa8c389563c227804d7d8
-URL:		http://search.cpan.org/dist/Test-MockObject/
-BuildRequires:	perl-Module-Build
+Source0:	https://www.cpan.org/modules/by-module/Test/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	67a1869d91d2e5d60d8986c13333978a
+URL:		https://metacpan.org/release/Test-MockObject
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Test-Exception
-BuildRequires:	perl-Test-Warn
+BuildRequires:	perl-Test-Exception >= 0.31
+BuildRequires:	perl-Test-Simple >= 0.98
+BuildRequires:	perl-Test-Warn >= 0.23
 BuildRequires:	perl-UNIVERSAL-can >= 1.11
 BuildRequires:	perl-UNIVERSAL-isa >= 0.06
 %endif
@@ -56,17 +56,17 @@ zachowania, wystarczy wejście i wyjście.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} pure_install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
